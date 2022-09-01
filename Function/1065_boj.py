@@ -11,11 +11,14 @@
 # num = int(input())
 # print(hansu(num))
 
-no_list = []
 
-for no in range(20):
-    for n in range(len(str(no))):
-        no_list.append(no % 10)
-        no //= 10
 
-print(no_list)
+# 321, 123, 320, 328, 322, 333
+
+N = int(input())
+
+num1 = N % 10
+N //= 0
+num2 = N % 10
+
+
