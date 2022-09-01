@@ -11,14 +11,25 @@
 # num = int(input())
 # print(hansu(num))
 
+def hansu(no):
+    cnt = 0
+    for i in range(1, no+1):
+        list_cal = []
+        if i < 100:
+            cnt += 1
+        else:
+            for j in range(len(str(i))):
+                num1 = i % 10
+                i //= 10
+                if i == 0:
+                    break
+                num2 = i % 10
+                list_cal.append(num1 - num2)
+            list_cal = list(set(list_cal))
+            if len(list_cal) == 1:
+                cnt += 1
+    return cnt
 
-
-# 321, 123, 320, 328, 322, 333
 
 N = int(input())
-
-num1 = N % 10
-N //= 0
-num2 = N % 10
-
-
+print(hansu(N))
