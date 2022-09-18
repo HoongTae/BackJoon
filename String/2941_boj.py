@@ -1,27 +1,35 @@
-S = list(input())
-cnt = 0
+croatia_alpha = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+S = input()
 
-for i in range(len(S)):
-    if i == (len(S)-1):
-        cnt += 1
-    else:
-        if S[i] == 'c' or S[i] == 's' or S[i] == 'z':
-            if S[i + 1] == '=' or S[i + 1] == '-':
-                continue
-        elif S[i] == 'd':
-            if i + 2 > (len(S)-1):
-                cnt += 1
-                continue
-            elif S[i + 1] == 'z' and S[i + 2] == '=':
-                continue
-            elif S[i + 1] == '-':
-                continue
-        elif S[i] == 'l' or S[i] == 'n':
-            if S[i + 1] == 'j':
-                continue
-        cnt += 1
+for i in croatia_alpha:
+    S = S.replace(i, '*')
 
-print(cnt)
+print(len(S))
 
 
-# ddz=z=jdz
+
+# S = list(input())
+# cnt = 0
+#
+# for i in range(len(S)):
+#     if i == (len(S)-1):
+#         cnt += 1
+#     else:
+#         if S[i] == 'c' or S[i] == 's' or S[i] == 'z':
+#             if S[i + 1] == '=' or S[i + 1] == '-':
+#                 continue
+#         elif S[i] == 'd':
+#             if i + 2 > (len(S)-1):
+#                 cnt += 1
+#                 continue
+#             elif S[i + 1] == 'z' and S[i + 2] == '=':
+#                 continue
+#             elif S[i + 1] == '-':
+#                 continue
+#         elif S[i] == 'l' or S[i] == 'n':
+#             if S[i + 1] == 'j':
+#                 continue
+#         cnt += 1
+#
+# print(cnt)
+#
